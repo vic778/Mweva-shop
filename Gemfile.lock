@@ -87,6 +87,10 @@ GEM
       json (>= 1.5.1)
     ast (2.4.2)
     bcrypt (3.1.18)
+    better_errors (2.9.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
@@ -394,6 +398,7 @@ DEPENDENCIES
   administrate
   administrate-field-enum
   algoliasearch-rails
+  better_errors (~> 2.0, >= 2.0.1)
   bootsnap
   capybara
   debug
