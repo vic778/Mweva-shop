@@ -3,23 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  belongs_to :role
-  after_initialize :set_default_role
 
   validates :username, presence: true, uniqueness: true
 
-  # def requires_confirmation?
-  #   !confirmed?
-  # end
+  enum role: { user: 0, admin: 1 }
 
-  def update_role(role_name)
-    self.role = Role.find_or_create_by(name: role_name)
+  def update_role(role)
+    self.role = role
     save
-  end
-
-  private
-
-  def set_default_role
-    self.role ||= Role.find_by(name: 'user')
   end
 end
