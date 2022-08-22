@@ -17,6 +17,7 @@ class UserDashboard < Administrate::BaseDashboard
     remember_created_at: Field::DateTime,
     reset_password_sent_at: Field::DateTime,
     reset_password_token: Field::String,
+    role: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
     unconfirmed_email: Field::String,
     username: Field::String,
     created_at: Field::DateTime,
@@ -47,6 +48,7 @@ class UserDashboard < Administrate::BaseDashboard
     remember_created_at
     reset_password_sent_at
     reset_password_token
+    role
     unconfirmed_email
     username
     created_at
@@ -65,6 +67,7 @@ class UserDashboard < Administrate::BaseDashboard
     remember_created_at
     reset_password_sent_at
     reset_password_token
+    role
     unconfirmed_email
     username
   ].freeze
