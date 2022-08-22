@@ -14,7 +14,7 @@ module Admin
         flash[:alert] = "You are not authorized to perform this action."
         redirect_back(fallback_location: root_path)
       end
-      # TODO Add authentication logic here.
+      # TODO: Add authentication logic here.
     end
 
     # Override this value to specify the number of elements to display at a time

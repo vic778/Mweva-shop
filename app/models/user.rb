@@ -17,11 +17,9 @@ class User < ApplicationRecord
     save
   end
 
-
   private
 
   def set_default_role
-    self.role ||= Role.find_by(name: 'user') 
+    self.role ||= Role.find_by(name: 'user')
   end
-
 end
