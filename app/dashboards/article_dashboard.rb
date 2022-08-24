@@ -14,7 +14,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     title: Field::String,
     image: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
