@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe "articles/show", type: :view do
   before(:each) do
     @article = assign(:article, Article.create!(
-      title: "Title",
-      model: "Model",
-      price: 2
-    ))
+                                  title: "Title",
+                                  model: "Model",
+                                  price: 2
+                                ))
   end
 
   it "renders attributes in <p>" do

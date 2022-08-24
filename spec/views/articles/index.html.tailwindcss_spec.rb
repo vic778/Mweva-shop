@@ -3,17 +3,17 @@ require 'rails_helper'
 RSpec.describe "articles/index", type: :view do
   before(:each) do
     assign(:articles, [
-      Article.create!(
-        title: "Title",
-        model: "Model",
-        price: 2
-      ),
-      Article.create!(
-        title: "Title",
-        model: "Model",
-        price: 2
-      )
-    ])
+             Article.create!(
+               title: "Title",
+               model: "Model",
+               price: 2
+             ),
+             Article.create!(
+               title: "Title",
+               model: "Model",
+               price: 2
+             )
+           ])
   end
 
   it "renders a list of articles" do
