@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   has_one_attached :image
+  has_many_attached :pictures
   validates :title, presence: true
   validates :model, presence: true
   validates :price, presence: true
