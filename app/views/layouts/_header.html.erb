@@ -1,0 +1,85 @@
+<header class="bg-pink-300 ">
+    <div >
+      <div class="logo">
+     
+      </div>
+      <a href="" class="togglebtn" id="navBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </a>
+      <nav class="">
+        <ul class="flex justify-center gap-x-9">
+          <li><a href="" class="navigation-links">Body</a></li>
+          <li><a href="" class="navigation-links">Hair</a></li>
+          <li><a href="#brand" class="navigation-links">Brands</a></li>
+          <li><a href="" class="navigation-links">Skincare</a></li>
+          <li><a href="" class="navigation-links">Mackeup</a></li>
+
+        </ul>
+        <ul class="flex justify-end ">
+              <li><a href="" class="navigation-links">Our Promise</a></li>
+          <li><a href="" class="btn btn-primary navigation-links">Subscribe Now</a></li>
+           <% if user_signed_in? %>
+              <%= link_to t("navigation.log_out"), destroy_user_session_path, method: :delete, class: "md:ml-2 bg-red-500 rounded text-white p-1 md:p-3 font-semibold" %>
+              <%= link_to t(current_user.username), edit_user_registration_path, class: "md:ml-2 bg-blue-500 rounded text-white p-1 md:p-3 font-semibold"  %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
+              <%= link_to "Sign up", new_user_registration_path, class: "md:ml-2 bg-red-500 rounded text-white p-1 md:p-3 font-semibold"%>
+            <% end %>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+<!-- -----------banner start-------- -->
+  <section class="banner">
+    <div class="banner-search">
+      <input type="text" placeholder="What are you looking for?" class="search-input">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    <div class="banner-header">
+      <div class="banner-header-content">
+        <h1 class="heading-primary">Merva Shop </br> Clean Beauty Made Easy</h1>
+        <p class="text-primary">Discover the best deals on the largest platform for clean beauty</p>
+        <a href="" class="btn btn-dark mb-hg hvr-bounce-to-top hvr-grow ">View All Products</a>
+        <div class="banner-items">
+
+          <div class="banner-item">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <div class="banner-item-info">
+              <h2>3400+</h2>
+              <p>Products</p>
+            </div>
+          </div>
+
+          <div class="banner-item">
+            <i class="fa fa-id-card-o" aria-hidden="true"></i>
+            <div class="banner-item-info">
+              <h2>200+</h2>
+              <p>Brandss</p>
+            </div>
+          </div>
+
+          <div class="banner-item">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            <div class="banner-item-info">
+              <h2>25%</h2>
+              <p>Avg. Saving</p>
+            </div>
+          </div>
+
+          <div class="banner-item">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            <div class="banner-item-info">
+              <h2>10+</h2>
+              <p>Retailers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- -----------banner end-------- -->
+
