@@ -51,12 +51,12 @@ gem "administrate"
 gem 'administrate-field-enum'
 gem "algoliasearch-rails"
 gem 'devise'
-gem "money-rails"
-gem "stripe"
 gem 'geocoder'
+gem "money-rails"
 gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
 gem "pundit"
 gem 'rails-i18n'
+gem "stripe"
 gem 'tailwindcss-rails', '~> 2.0', '>= 2.0.12'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
