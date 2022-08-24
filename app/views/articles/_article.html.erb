@@ -19,6 +19,12 @@
     <%= link_to image_tag(article.image_as_thumbnail), article.image%>
   </p>
 
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Pictures:</strong>
+    <% article.pictures.each do |picture| %>
+     <%= link_to image_tag(article.pictures_as_thumbnail(picture)), picture%>
+    <% end %>
+
   <% if action_name != "show" %>
     <%= link_to "Show this article", article, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this article', edit_article_path(article), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
