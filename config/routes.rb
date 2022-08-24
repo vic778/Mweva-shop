@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+  resources :articles
   namespace :admin do
       resources :users
+      resources :articles
+
 
       root to: "users#index"
     end
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: 'articles#index'
+    devise_for :users
+    resources :articles
 
-  # Defines the root path route ("/")
-  root "home#index"
 end
